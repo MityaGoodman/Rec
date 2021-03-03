@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+void syso(int n, int len_base, string base)
+{
+    if (n>len_base)
+        syso(n/len_base,len_base,base);
+    cout << base[n%len_base];
+}
+
+int main()
+{
+    int a,b;
+    cin >> a >> b;
+    string c;
+    cin >> c;
+    syso(a,b,c);
+    return 0;
+}
