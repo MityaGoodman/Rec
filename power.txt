@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+long long int power(long long int a, long long int n)
+{
+    if (n==1)
+        return a;
+    if (n==2)
+        return a*a;
+    if (n%2!=0)
+    {
+        return a*power(a,n-1);
+    }
+    else
+    {
+        return power(a,n/2)*power(a,n/2);
+    }
+}
+
+int main()
+{
+    int a,b;
+    cin >> a >> b;
+    cout << power(a,b);
+    return 0;
+}
